@@ -7,6 +7,7 @@ import youthcon.blog.service.PostService;
 
 @Controller
 public class PageController {
+
     private PostService postService;
 
     public PageController(PostService postService) {
