@@ -1,5 +1,7 @@
 package youthcon.blog.web.dto;
 
+import youthcon.blog.domain.Post;
+
 public class PostSaveRequestDto {
     private String title;
     private String content;
@@ -15,5 +17,9 @@ public class PostSaveRequestDto {
 
     public String getAuthor() {
         return author;
+    }
+
+    public Post toEntity() {
+        return new Post(title, content, author);
     }
 }
